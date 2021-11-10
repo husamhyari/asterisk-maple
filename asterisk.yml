@@ -1,0 +1,9 @@
+
+  - hosts: localhost
+    tasks:
+      - name: install asterisk
+        command: /bin/bash asterisk-install-bashCMD.sh
+        register: command_output
+
+      - debug:
+          var: command_output.stdout_lines  
